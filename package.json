@@ -1,7 +1,7 @@
 {
-  "name": "proposal-i",
+  "name": "react-paged",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^10.1.2",
-    "@react-three/fiber": "^9.1.2",
     "@tailwindcss/vite": "^4.1.1",
     "pagedjs": "^0.4.3",
     "react": "^19.0.0",
