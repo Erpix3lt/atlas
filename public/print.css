@@ -22,21 +22,21 @@
   }
 
   @top-left {
-    content: "BOOK TITLE";
+    content: "SABOTAGE IN AI";
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-style: italic;
   }
 
   @top-center {
-    content: "CHAPTER";
+    content: "KISD";
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-weight: bold;
   }
 
   @top-right {
-    content: "AUTHOR NAME";
+    content: "TH Köln";
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-weight: lighter;
@@ -71,4 +71,12 @@
   margin-right: 15px;
   margin-top: 45px;
   margin-bottom: 25px;
+}
+
+.page-break{
+  break-before: page;
+}
+
+h2 {
+  string-set: chapter content(text);
 }

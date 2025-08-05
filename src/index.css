@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 body {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'IBM Plex Serif', serif;
   background: black;
 }
 
@@ -15,7 +16,132 @@ body {
   }
 }
 
-p{
-  font-size: 11px;
+@theme {
+  --color-tgreen: #124711;
+  --color-tpink: #FFD2FE;
+  --color-tblue: #0019FF;
+  --color-tviolet: #5A006C;
+
+  --font-uncut: 'Uncut Sans', sans-serif;
+  --font-ibm: 'IBM Plex Serif', serif;
+  --font-kapakana: 'Kapakana', sans-serif;
+
+  --h1-size: 190px;
+  --h2-size: 18px;
+  --h3-size: 16px;
+  --h4-size: 14px;
+  --h5-size: 12px;
+  --p-size: 11px;
+  --citation-size: 11px;
+  --atlas-size: 9px;
+  --footnote: 7px;
+}
+
+h1 {
+  font-family: var(--font-kapakana);
+  font-size: var(--h1-size);
+  margin: 0;
+  line-height: 150px;
+}
+
+.backpage {
+  font-family: var(--font-kapakana);
+  font-size: var(--h2-size);
+}
+
+h2 {
+  font-family: var(--font-uncut);
+  font-size: var(--h2-size);
+  font-weight: 700; /* Bold */
+  margin-bottom: 4em;
+}
+
+h3 {
+  font-family: var(--font-uncut);
+  font-size: var(--h3-size);
+  font-weight: 500;
+  margin-bottom: 2em;
+}
+
+h4 {
+  font-family: var(--font-uncut);
+  font-size: var(--h4-size);
+  font-weight: 500;
+  text-transform: lowercase;
+   margin-bottom: 1em;
+}
+
+h5 {
+  font-family: var(--font-ibm);
+  font-size: var(--h5-size);
+  font-weight: 400; /* Regular */
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+
+.cover-page {
+  font-family: var(--font-uncut);
+  font-size: var(--p-size);
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--font-ibm);
+  font-size: var(--p-size);
+  font-weight: 400;
+  /* text-indent: 20px; */
+}
+
+a {
+  font-family: var(--font-ibm);
+  font-size: var(--p-size);
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  margin: 0;
+  line-height: 1;
+}
+
+.citation {
+  font-family: var(--font-ibm);
+  font-size: var(--citation-size);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.page-numeration{
+  font-family: var(--font-uncut);
+  font-size: var(--atlas-size);
+  font-weight: 400;
+}
+
+.footnote {
+  font-family: var(--font-ibm);
+  font-size: var(--footnote);
+  font-weight: 400;
+}
+
+.footnote-ghost {
+  font-family: var(--font-ibm);
+  font-size: var(--footnote);
+  font-weight: 400;
+}
+
+.reference-title {
+  font-family: var(--font-uncut);
+  font-size: var(--footnote);
+  font-weight: 700; 
+}
+
+.atlas {
+  font-family: var(--font-ibm);
+  font-size: var(--atlas-size);
+  font-weight: 400;
+}
+
+.reference {
+  font-family: var(--font-ibm);
+  font-size: var(--footnote);
+  font-weight: 400;
 }
 

@@ -1,7 +1,7 @@
 export function Book() {
   return (
     <>
-      <p>[The content of your Book goes here ...]</p>
+      <div className="bg-tpink">THIS SHOULD BE BLUE</div>
     </>
   );
 }
