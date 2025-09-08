@@ -39,7 +39,7 @@ export type NavigationProps = {
 
 export function Navigation({ elements }: NavigationProps) {
   return (
-    <div className="w-fit min-w-1/6 pt-40 pl-10 ">
+    <div className="w-fit min-w-1/6 pt-40 pl-10 fixed ">
       {elements.map((element) => (
         <div key={element.title} className="mb-4">
           <p className="font-bold mb-2 text-white">{element.title}</p>
