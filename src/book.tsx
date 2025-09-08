@@ -1,7 +1,7 @@
 export function Book() {
   return (
     <>
-      <div className="bg-tpink">THIS SHOULD BE BLUE</div>
+      <div className="bg-tblue">THIS SHOULD BE BLUE</div>
     </>
   );
 }
