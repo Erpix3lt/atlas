@@ -18,6 +18,7 @@ export function Book() {
     <>
       <div>
         <TwoColumns>
+          <h2 style={{ display: "none" }}>Two Columns</h2>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -33,8 +34,8 @@ export function Book() {
         <Br />
         <PageBreak />
         <ThreeColumnsLeft>
+          <h2 style={{ display: "none" }}>Three Columns Left</h2>
           <p>
-            {" "}
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -46,9 +47,9 @@ export function Book() {
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
         </ThreeColumnsLeft>
-        <Br />
         <PageBreak />
         <ThreeColumnsRight>
+          <h2 style={{ display: "none" }}>Three Columns Right</h2>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -57,19 +58,72 @@ export function Book() {
             Lorem ipsum dolor sit amet.
           </p>
         </ThreeColumnsRight>
-        <Br />
         <PageBreak />
       </div>
       <div>
-        <Footnote> This is a footnote</Footnote> <Br />
-        <HighlightedBlack> This is highlighted black </HighlightedBlack> <Br />
-        <HighlightedPink> This is highlighted pink </HighlightedPink> <Br />
-        <Keyword> This is a keyword </Keyword> <Br />
-        <Quote> This is a quote </Quote> <Br />
-        <Repitition> This is a repitition </Repitition> <Br />
+        <div>
+          <h2 style={{ display: "none" }}>Typography</h2>
+          <h1>Title</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <p>
+            This is a paragraph. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <a href="#">This is a link</a>
+        </div>
         <PageBreak />
+        <h2 style={{ display: "none" }}>Footnote</h2>
+        <Footnote>
+          This is a footnote. Lorem ipsum dolor sit amet, consetetur sadipscing
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+          magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+          justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </Footnote>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>HighlightedBlack</h2>
+        <HighlightedBlack>
+          This is highlighted black. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua.
+        </HighlightedBlack>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>HighlightedPink</h2>
+        <HighlightedPink>
+          This is highlighted pink. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua.
+        </HighlightedPink>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>Keyword</h2>
+        <Keyword> This is a keyword </Keyword>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>Quote</h2>
+        <Quote>
+          This is a quote. Lorem ipsum dolor sit amet, consetetur sadipscing
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+          magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+          justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </Quote>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>Repitition</h2>
+        <Repitition>
+          This is a repitition. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua.
+        </Repitition>
+        <PageBreak />
+        <h2 style={{ display: "none" }}>VerticalText</h2>
         <VerticalText text="Vertical Text" />
         <PageBreak />
+        <h2 style={{ display: "none" }}>List</h2>
         <List>
           <ListItem index={1}>
             <p> List Item 1</p>

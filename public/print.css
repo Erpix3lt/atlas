@@ -15,28 +15,22 @@
     content: "";
   }
 
-  @bottom-left {
-    content: string(chapter);
-    font-family: 'Uncut Sans', sans-serif;
-    font-size: 8px;
-  }
-
   @top-left {
-    content: "SABOTAGE IN AI";
+    content: string(chapter);
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-style: italic;
   }
 
   @top-center {
-    content: "KISD";
+    content: "ATLAS";
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-weight: bold;
   }
 
   @top-right {
-    content: "TH Köln";
+    content: "Max Schmalenbach";
     font-family: 'Uncut Sans', sans-serif;
     font-size: 8px;
     font-weight: lighter;
