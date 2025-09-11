@@ -1,43 +1,53 @@
-# React Paged
+# Atlas Paged
 
 ![Preview](preview.png)
 
-## Install & Run
+A comprehensive React component library for creating print-ready documents with Paged.js, featuring a built-in development preview system.
 
-- `npm install`
-- `npm run dev`
+## Installation
+
+```bash
+npm install atlas-paged
+```
+
+## Install Peer Dependencies
+
+```bash
+npm install react react-dom tailwindcss pagedjs
+```
+
+## Quick Start
+
+```ts
+import { Layouter, TwoColumns, PageBreak } from 'atlas-paged';
+import 'atlas-paged/styles'; // Import fonts
+import 'atlas-paged/print.css'; // Import print styles
+
+function MyDocument() {
+  return (
+    <div>
+      <div id="pagedjsdocroot" style={{ display: "none" }}>
+        <TwoColumns>
+          <p>Your content here...</p>
+        </TwoColumns>
+        <PageBreak />
+        <p>Next page content...</p>
+      </div>
+
+      <div id="preview"></div>
+      <Layouter />
+    </div>
+  );
+}
+```
 
 ## Technologies Used
 
-**React, Vite, TypeScript, Paged.js, Tailwind CSS**
+React, Vite, TypeScript, Paged.js, Tailwind CSS
 
-This is a barebones starter template for using **Paged.js** with **React**. It includes **Tailwind CSS** and **TypeScript**, making it easy to build a custom component architecture for complex, print-ready documents.
-
-For a fully styled version with a collection of ready-made components, see below:
-
-### Stylized Version
-
-[View on GitHub](https://github.com/mschmalenbach/react-paged)
-
-### Live Demo
-
-[Live Demo](https://proposal-i.vercel.app/)
+This is a comprehensive component library for creating print-ready documents with Paged.js and React. It includes Tailwind CSS integration and TypeScript support, making it easy to build complex, print-ready documents with a custom component architecture.
 
 ---
 
-## Architecture Overview
-
-- **`App.tsx`** – Entry point that imports both `Book.tsx` and `Layouter.tsx`
-- **`Book.tsx`** – Contains your document structure: components, chapters, and text
-- **`Layouter.tsx`** – Renders the `Book.tsx` and applies `print.css` for paged styling
-- **`print.css`** – Contains styles specific to Paged.js (warnings may appear, but can be ignored)
-- **`index.css`** – Use this file for theme variables, fonts, and general styling
-
----
-
-## Printing
-
-To print your document, use the **browser’s print dialog** (`Cmd + P` / `Ctrl + P`).  
-Paged.js supports additional features like **bleed margins** and **cutting guides**.
-
-![Print preview](preview-print.png)
+License
+MIT © Max Schmalenbach EOF ```
