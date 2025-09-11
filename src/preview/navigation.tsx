@@ -83,7 +83,7 @@ export function Navigation({
   };
 
   return (
-    <div className="w-fit min-w-1/6 pt-40 pl-10 fixed ">
+    <div className="w-fit min-w-1/6">
       {!isPreviewReady && (
         <>
           <p>Loading preview...</p>

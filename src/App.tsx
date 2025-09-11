@@ -1,18 +1,30 @@
 import { useState } from "react";
 import { Book } from "./book";
 import { Layouter } from "./paged/layouter";
+import { Information } from "./preview/information";
 import { devElements, Navigation } from "./preview/navigation";
 
 export default function App() {
   const [isPreviewReady, setIsPreviewReady] = useState(false);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <div id="pagedjsdocroot" style={{ display: "none" }}>
         <Book />
       </div>
-      <div id="preview" className="absolute left-80"></div>
-      <Navigation elements={devElements} isPreviewReady={isPreviewReady} />
+
+      {/* Preview - background layer with lower z-index */}
+      <div id="preview" className="z-0 ml-96"></div>
+
+      {/* Navigation - fixed overlay on the left */}
+      <div className="fixed top-0 left-0 z-10 pt-30 m-10">
+        <Navigation elements={devElements} isPreviewReady={isPreviewReady} />
+      </div>
+
+      <div className="fixed top-0 right-0 z-10 pt-30 m-10 hidden md:block">
+        <Information />
+      </div>
+
       <Layouter onPreviewReady={() => setIsPreviewReady(true)} />
     </div>
   );
