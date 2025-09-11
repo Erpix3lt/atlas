@@ -54,12 +54,10 @@ function MyDocument() {
 
 - `H1`, `H2`, `H3`, `H4`, `H5`, `H6` - Styled headings
 - `P` - Paragraph component
-- `SmallCaps` - Small caps text styling
 
 ### Visual Elements
 
 - `PageBreak` - Force page breaks
-- `BlankSpace` - Controlled spacing
 - `Divider` - Visual dividers
 
 ### Page Components
@@ -78,12 +76,11 @@ function MyDocument() {
 For development with live preview:
 
 ```tsx
-import { Navigation, TwoColumnsPage } from "atlas-paged";
+import { TwoColumnsPage } from "atlas-paged";
 
 function App() {
   return (
     <div>
-      <Navigation />
       <TwoColumnsPage /> {/* Your preview pages */}
     </div>
   );
