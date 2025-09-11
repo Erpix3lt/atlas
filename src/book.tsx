@@ -16,7 +16,7 @@ import { VerticalText } from "./components/typography/vertical-text";
 export function Book() {
   return (
     <>
-      <div>
+      <div id="two-columns">
         <TwoColumns>
           <h2 style={{ display: "none" }}>Two Columns</h2>
           <p>
@@ -32,42 +32,55 @@ export function Book() {
           </p>
         </TwoColumns>
         <Br />
-        <PageBreak />
-        <ThreeColumnsLeft>
-          <h2 style={{ display: "none" }}>Three Columns Left</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-        </ThreeColumnsLeft>
-        <PageBreak />
-        <ThreeColumnsRight>
-          <h2 style={{ display: "none" }}>Three Columns Right</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-        </ThreeColumnsRight>
-        <PageBreak />
       </div>
-      <div>
-        <div>
+      <PageBreak />
+
+      <div id="three-columns">
+        <div id="three-columns-left">
+          <ThreeColumnsLeft>
+            <h2 style={{ display: "none" }}>Three Columns Left</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </p>
+          </ThreeColumnsLeft>
+        </div>
+        <PageBreak />
+        <div id="three-columns-right">
+          <ThreeColumnsRight>
+            <h2 style={{ display: "none" }}>Three Columns Right</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </ThreeColumnsRight>
+        </div>
+      </div>
+      <PageBreak />
+
+      <div id="typography">
+        <div id="title">
           <h2 style={{ display: "none" }}>Typography</h2>
           <h1>Title</h1>
+        </div>
+        <div id="headings">
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
           <h4>Heading 4</h4>
           <h5>Heading 5</h5>
+        </div>
+        <div id="paragraph">
           <p>
             This is a paragraph. Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
@@ -77,8 +90,12 @@ export function Book() {
           </p>
           <a href="#">This is a link</a>
         </div>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="footnote">
         <h2 style={{ display: "none" }}>Footnote</h2>
+        <p className="footnote">here</p>
         <Footnote>
           This is a footnote. Lorem ipsum dolor sit amet, consetetur sadipscing
           elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -86,24 +103,36 @@ export function Book() {
           justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet.
         </Footnote>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="highlighted-black">
         <h2 style={{ display: "none" }}>HighlightedBlack</h2>
         <HighlightedBlack>
           This is highlighted black. Lorem ipsum dolor sit amet, consetetur
           sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
           dolore magna aliquyam erat, sed diam voluptua.
         </HighlightedBlack>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="highlighted-pink">
         <h2 style={{ display: "none" }}>HighlightedPink</h2>
         <HighlightedPink>
           This is highlighted pink. Lorem ipsum dolor sit amet, consetetur
           sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
           dolore magna aliquyam erat, sed diam voluptua.
         </HighlightedPink>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="keyword">
         <h2 style={{ display: "none" }}>Keyword</h2>
         <Keyword> This is a keyword </Keyword>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="quote">
         <h2 style={{ display: "none" }}>Quote</h2>
         <Quote>
           This is a quote. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -112,17 +141,26 @@ export function Book() {
           justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet.
         </Quote>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="repitition">
         <h2 style={{ display: "none" }}>Repitition</h2>
         <Repitition>
           This is a repitition. Lorem ipsum dolor sit amet, consetetur
           sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
           dolore magna aliquyam erat, sed diam voluptua.
         </Repitition>
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="vertical-text">
         <h2 style={{ display: "none" }}>VerticalText</h2>
         <VerticalText text="Vertical Text" />
-        <PageBreak />
+      </div>
+      <PageBreak />
+
+      <div id="list">
         <h2 style={{ display: "none" }}>List</h2>
         <List>
           <ListItem index={1}>
