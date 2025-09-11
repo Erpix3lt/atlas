@@ -4,9 +4,13 @@ import { Previewer } from "pagedjs";
 
 type Flow = {
   total: number;
-}
+};
 
-export function Layouter() {
+type LayouterProps = {
+  onPreviewReady?: () => void;
+};
+
+export function Layouter({ onPreviewReady }: LayouterProps) {
   useLayoutEffect(() => {
     const previewer = new Previewer();
 
@@ -20,6 +24,9 @@ export function Layouter() {
       )
       .then((flow: Flow) => {
         console.log("preview rendered, total pages", flow.total);
+        if (onPreviewReady) {
+          onPreviewReady();
+        }
       });
 
     return () => {
@@ -27,7 +34,7 @@ export function Layouter() {
         .querySelectorAll("[data-pagedjs-inserted-styles]")
         .forEach((e) => e.parentNode?.removeChild(e));
     };
-  }, []);
+  }, [onPreviewReady]);
 
   return <div></div>;
 }

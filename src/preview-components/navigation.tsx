@@ -1,24 +1,35 @@
+import React from "react";
+
 export const devElements: NavigationElement[] = [
   {
-    title: "Getting Started",
+    title: "layout",
     components: [
-      { title: "Introduction", url: "/docs/introduction" },
-      { title: "Installation", url: "/docs/installation" },
+      { title: "two columns", url: "#two-columns" },
+      { title: "three columns", url: "#three-columns" },
     ],
   },
   {
-    title: "Components",
+    title: "typography",
     components: [
-      { title: "Button", url: "/docs/components/button" },
-      { title: "Card", url: "/docs/components/card" },
-      { title: "Modal", url: "/docs/components/modal" },
+      { title: "title", url: "#title" },
+      { title: "headings", url: "#headings" },
+      { title: "paragraph", url: "#paragraph" },
     ],
   },
   {
-    title: "Utilities",
+    title: "footnote",
+    components: [{ title: "footnote", url: "#footnote" }],
+  },
+  {
+    title: "visual",
     components: [
-      { title: "Hooks", url: "/docs/utilities/hooks" },
-      { title: "Helpers", url: "/docs/utilities/helpers" },
+      { title: "highlighted black", url: "#highlighted-black" },
+      { title: "highlighted pink", url: "#highlighted-pink" },
+      { title: "keyword", url: "#keyword" },
+      { title: "quote", url: "#quote" },
+      { title: "repitition", url: "#repitition" },
+      { title: "vertical text", url: "#vertical-text" },
+      { title: "list", url: "#list" },
     ],
   },
 ];
@@ -35,11 +46,54 @@ export type NavigationElement = {
 
 export type NavigationProps = {
   elements: NavigationElement[];
+  isPreviewReady?: boolean;
 };
 
-export function Navigation({ elements }: NavigationProps) {
+export function Navigation({
+  elements,
+  isPreviewReady = false,
+}: NavigationProps) {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    url: string
+  ) => {
+    e.preventDefault();
+    if (!isPreviewReady) {
+      return;
+    }
+    const targetId = url.replace("#", "");
+    const previewContainer = document.querySelector("#preview");
+    if (!previewContainer) {
+      console.warn("Preview container not found");
+      return;
+    }
+    const targetElement = previewContainer.querySelector(`#${targetId}`);
+    if (!targetElement) {
+      console.warn(`Target element with id "${targetId}" not found in preview`);
+      return;
+    }
+
+    const pageElement = targetElement.closest(".pagedjs_page");
+    if (pageElement) {
+      pageElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="w-fit min-w-1/6 pt-40 pl-10 fixed ">
+      {!isPreviewReady && (
+        <>
+          <p>Loading preview...</p>
+        </>
+      )}
       {elements.map((element) => (
         <div key={element.title} className="mb-4">
           <p className="font-bold mb-2 text-white">{element.title}</p>
@@ -48,7 +102,12 @@ export function Navigation({ elements }: NavigationProps) {
               <li key={component.url} className="mb-1">
                 <a
                   href={component.url}
-                  className="text-white hover:underline pl-5  hover:bg-tpink w-fit hover:text-black"
+                  onClick={(e) => handleNavClick(e, component.url)}
+                  className={`text-white hover:underline pl-5 hover:bg-tpink w-fit hover:text-black link ${
+                    !isPreviewReady
+                      ? "opacity-50 cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
                 >
                   {component.title}
                 </a>
