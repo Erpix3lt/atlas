@@ -18,10 +18,10 @@ npm install react react-dom tailwindcss pagedjs
 
 ## Quick Start
 
-```ts
-import { Layouter, TwoColumns, PageBreak } from 'atlas-paged';
-import 'atlas-paged/styles'; // Import fonts
-import 'atlas-paged/print.css'; // Import print styles
+```tsx
+import { Layouter, TwoColumns, PageBreak } from "atlas-paged";
+import "atlas-paged/styles"; // Import fonts
+import "atlas-paged/print.css"; // Import print styles
 
 function MyDocument() {
   return (
@@ -41,13 +41,61 @@ function MyDocument() {
 }
 ```
 
+## Available Components
+
+### Layout Components
+
+- `TwoColumns` - Two-column layout
+- `ThreeColumnsLeft` - Three-column layout with emphasis on left
+- `ThreeColumnsCenter` - Three-column layout with emphasis on center
+- `ThreeColumnsRight` - Three-column layout with emphasis on right
+
+### Typography
+
+- `H1`, `H2`, `H3`, `H4`, `H5`, `H6` - Styled headings
+- `P` - Paragraph component
+- `SmallCaps` - Small caps text styling
+
+### Visual Elements
+
+- `PageBreak` - Force page breaks
+- `BlankSpace` - Controlled spacing
+- `Divider` - Visual dividers
+
+### Page Components
+
+- `PageNumeration` - Page numbering
+- `Layouter` - Main layout engine
+
+### Development Tools
+
+- `Navigation` - Preview navigation
+- `LoremIpsum` - Lorem ipsum generator
+- `ChapterName` - Chapter naming utility
+
+## Development Workflow
+
+For development with live preview:
+
+```tsx
+import { Navigation, TwoColumnsPage } from "atlas-paged";
+
+function App() {
+  return (
+    <div>
+      <Navigation />
+      <TwoColumnsPage /> {/* Your preview pages */}
+    </div>
+  );
+}
+```
+
 ## Technologies Used
 
 React, Vite, TypeScript, Paged.js, Tailwind CSS
 
 This is a comprehensive component library for creating print-ready documents with Paged.js and React. It includes Tailwind CSS integration and TypeScript support, making it easy to build complex, print-ready documents with a custom component architecture.
 
----
+## License
 
-License
-MIT © Max Schmalenbach EOF ```
+MIT © Max Schmalenbach
