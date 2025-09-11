@@ -11,7 +11,7 @@ export default function App() {
       <div id="pagedjsdocroot" style={{ display: "none" }}>
         <Book />
       </div>
-      <div id="preview" className="absolute right-0"></div>
+      <div id="preview" className="absolute left-80"></div>
       <Navigation elements={devElements} isPreviewReady={isPreviewReady} />
       <Layouter onPreviewReady={() => setIsPreviewReady(true)} />
     </div>
