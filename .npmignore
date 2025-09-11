@@ -1,0 +1,38 @@
+# Source files (keep dist only)
+src/main.tsx
+src/App.tsx
+src/book.tsx
+
+# Development files
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+*.test.*
+*.spec.*
+
+# Build artifacts not needed for package
+node_modules/
+.cache/
+.parcel-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env*
+
+# Development configs
+vite.config.ts
+tsconfig*.json
+eslint.config.js
+
+# Development previews and examples (optional - you might want to keep these for docs)
+preview-*.png
+README\ copy.md
