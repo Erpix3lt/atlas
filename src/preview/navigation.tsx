@@ -1,13 +1,8 @@
 import React from "react";
+import { navigationLayout } from "./chapter/layout";
 
 export const devElements: NavigationElement[] = [
-  {
-    title: "layout",
-    components: [
-      { title: "two columns", url: "#two-columns" },
-      { title: "three columns", url: "#three-columns" },
-    ],
-  },
+  navigationLayout,
   {
     title: "typography",
     components: [

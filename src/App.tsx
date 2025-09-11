@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Book } from "./book";
 import { Layouter } from "./paged/layouter";
-import { devElements, Navigation } from "./preview-components/navigation";
+import { devElements, Navigation } from "./preview/navigation";
 
 export default function App() {
   const [isPreviewReady, setIsPreviewReady] = useState(false);

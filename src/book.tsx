@@ -1,8 +1,4 @@
 import { PageBreak } from "./components/layout/page-break";
-import { ThreeColumnsLeft } from "./components/layout/three-columns-left";
-import { ThreeColumnsRight } from "./components/layout/three-columns-right";
-import { TwoColumns } from "./components/layout/two-columns";
-import { Br } from "./components/typography/br";
 import { Footnote } from "./components/typography/footnote";
 import { HighlightedBlack } from "./components/typography/highlighted-black";
 import { HighlightedPink } from "./components/typography/highlighted-pink";
@@ -12,61 +8,29 @@ import { ListItem } from "./components/typography/list-item";
 import { Quote } from "./components/typography/quote";
 import { Repitition } from "./components/typography/repitition";
 import { VerticalText } from "./components/typography/vertical-text";
+import { ChapterName } from "./preview/chapter-name";
+import { ThreeColumnsLeftPage } from "./preview/chapter/layout/three-columns-left-page";
+import { ThreeColumnsRightPage } from "./preview/chapter/layout/three-columns-right-page";
+import { TwoColumnsPage } from "./preview/chapter/layout/two-columns-page";
 
 export function Book() {
   return (
     <>
-      <div id="two-columns">
-        <TwoColumns>
-          <h2 style={{ display: "none" }}>Two Columns</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-        </TwoColumns>
-        <Br />
+      <div>
+        <ChapterName name="two columns" id="two-columns" />
+        <TwoColumnsPage />
       </div>
       <PageBreak />
-
-      <div id="three-columns">
-        <div id="three-columns-left">
-          <ThreeColumnsLeft>
-            <h2 style={{ display: "none" }}>Three Columns Left</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
-            </p>
-          </ThreeColumnsLeft>
-        </div>
-        <PageBreak />
-        <div id="three-columns-right">
-          <ThreeColumnsRight>
-            <h2 style={{ display: "none" }}>Three Columns Right</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet.
-            </p>
-          </ThreeColumnsRight>
-        </div>
+      <div>
+        <ChapterName name="three columns left" id="three-columns-left" />
+        <ThreeColumnsLeftPage />
       </div>
+      <PageBreak />
+      <div>
+        <ChapterName name="three columns right" id="three-columns-right" />
+        <ThreeColumnsRightPage />
+      </div>
+
       <PageBreak />
 
       <div id="typography">
@@ -95,7 +59,6 @@ export function Book() {
 
       <div id="footnote">
         <h2 style={{ display: "none" }}>Footnote</h2>
-        <p className="footnote">here</p>
         <Footnote>
           This is a footnote. Lorem ipsum dolor sit amet, consetetur sadipscing
           elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
