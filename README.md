@@ -4,6 +4,9 @@
 
 A comprehensive React component library for creating print-ready documents with Paged.js, featuring a built-in development preview system.
 
+## Preview Version
+https://atlas-paged.vercel.app/
+
 ## Installation
 
 ```bash
