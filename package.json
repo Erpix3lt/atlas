@@ -30,15 +30,8 @@
     "prepublishOnly": "npm run build:lib"
   },
   "keywords": [
-    "react",
     "paged.js",
-    "print",
-    "pdf",
-    "typography",
-    "layout",
-    "components",
-    "preview",
-    "development"
+    "react"
   ],
   "author": "Max Schmalenbach",
   "license": "MIT",
