@@ -1,6 +1,6 @@
-import { APAReference } from "../components/pages/references";
+import { APAReference } from "../../../components/pages/references";
 
-export const bibliography: APAReference[] = [
+export const references: APAReference[] = [
   {
     authors: [
       "Alemohammad, S.",

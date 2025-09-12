@@ -1,4 +1,4 @@
-import { Chapter } from "../components/pages/atlas";
+import { Chapter } from "../../../components/pages/atlas";
 
 export const atlas: Chapter[] = [
   {

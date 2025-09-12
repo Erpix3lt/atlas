@@ -1,7 +1,7 @@
 import { ThreeColumnsRight } from "../../../components/layout/three-columns-right";
 import { LoremIpsum } from "../../lorem-ipsum";
 
-export function ThreeColumnsRightPage() {
+export function ThreeColumnsRightStory() {
   return (
     <ThreeColumnsRight>
       <LoremIpsum content={"extraLong"} />

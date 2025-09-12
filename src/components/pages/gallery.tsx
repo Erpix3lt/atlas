@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { images } from "../../assets/images";
 import { Footnote } from "../typography/footnote";
 import {
   ImageReference,
@@ -11,10 +10,11 @@ function StyledGalleryImage({ src, alt }: { src: string; alt: string }) {
 }
 
 export type GalleryProps = {
+  images: ImageReference[];
   ids: string[];
 };
 
-export function Gallery({ ids }: GalleryProps) {
+export function Gallery({ ids, images }: GalleryProps) {
   const hasBeenRendered: string[] = [];
 
   if (!ids || ids.length === 0 || ids.length > 16) {
