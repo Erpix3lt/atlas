@@ -1,5 +1,3 @@
-// Main entry point for the NPM package
-
 // Core Paged.js integration
 export { Layouter } from "./paged/layouter";
 
@@ -44,17 +42,6 @@ export {
   DottedLineWhite,
 } from "./components/dotted-line";
 export { PageNumeration } from "./components/page-numeration";
-
-// Preview system (for development)
-export { ChapterName } from "./preview/chapter-name";
-export { Information } from "./preview/information";
-export { LoremIpsum } from "./preview/lorem-ipsum";
-export { Navigation } from "./preview/navigation";
-
-// Preview layout pages
-export { ThreeColumnsLeftPage } from "./preview/chapter/layout/three-columns-left-page";
-export { ThreeColumnsRightPage } from "./preview/chapter/layout/three-columns-right-page";
-export { TwoColumnsPage } from "./preview/chapter/layout/two-columns-page";
 
 // Types
 export type { AtlasProps, Chapter } from "./components/pages/atlas";
