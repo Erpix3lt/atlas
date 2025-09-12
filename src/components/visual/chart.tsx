@@ -1,3 +1,4 @@
+import { images } from "../../preview/chapter/pages/images";
 import { TwoColumns } from "../layout/two-columns";
 import { Figure, FigureProps } from "./figure";
 
@@ -28,7 +29,7 @@ export function ChartItem({
 export function Chart({ id, items }: ChartProps) {
   return (
     <div>
-      <Figure id={id} />
+      <Figure id={id} images={images} />
       <ul>
         {items.length > 3 ? (
           <TwoColumns>

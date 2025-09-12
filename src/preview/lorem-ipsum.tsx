@@ -12,5 +12,9 @@ type LoremIpsumProps = {
 };
 
 export function LoremIpsum({ content = "normal" }: LoremIpsumProps) {
-  return <p>{contents[content]}</p>;
+  return <p>{getLoremIpsum(content)}</p>;
+}
+
+export function getLoremIpsum(content: keyof typeof contents) {
+  return contents[content];
 }

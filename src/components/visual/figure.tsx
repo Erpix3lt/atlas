@@ -1,14 +1,18 @@
 // src/components/image-loader.tsx
 
 import { useState } from "react";
-import { images } from "../../assets/images";
-import { FigureImage, increaseGlobalFigureCounter } from "./figure-image";
+import {
+  FigureImage,
+  ImageReference,
+  increaseGlobalFigureCounter,
+} from "./figure-image";
 
 export type FigureProps = {
+  images: ImageReference[];
   id: string;
 };
 
-export function Figure({ id }: FigureProps) {
+export function Figure({ id, images }: FigureProps) {
   const [figureNumber] = useState(() => increaseGlobalFigureCounter());
 
   const image = images.find((image) => image.id === id);
